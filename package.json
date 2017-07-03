@@ -1,0 +1,11 @@
+{
+  "name": "bbbscrape",
+  "version": "1.0.0",
+  "description": "Scrapes BBB to make droptables for Maple Story Private Servers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
