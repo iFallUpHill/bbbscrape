@@ -6,7 +6,9 @@ var eqpDict = require('./json/Eqp.json');
 var consumeDict = require('./json/Consume.json');
 var etcDict = require('./json/Etc.json');
 
-var toID = function(arr, category) {
+var queries = argv.queries ? true : false;
+
+var toID = function(arr, category, mobID='00000000', dropRate = 0) {
   //console.log(arr)
   idList = []
 
@@ -27,7 +29,11 @@ var toID = function(arr, category) {
       if (arr[i] === '-' || currentID === undefined) {
         console.log('Cannot find ID for: ', arr[i].trim());
       } else {
-        idList.push(currentID);
+        if (queries) {
+          console.log("INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('" + mobID+ "', '" + currentID + "', '1', '1', '0', '" + dropRate + "');");
+        } else {
+          idList.push(currentID);
+        }
       }
     }
   }
@@ -38,7 +44,11 @@ var toID = function(arr, category) {
       if (arr[i] === '-' || currentID === undefined) {
         console.log('Cannot find ID for: ', arr[i].trim());
       } else {
-        idList.push(currentID);
+        if (queries) {
+          console.log("INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('" + mobID+ "', '" + currentID + "', '1', '1', '0', '" + dropRate + "');");
+        } else {
+          idList.push(currentID);
+        }
       }
     }
   }
@@ -49,7 +59,11 @@ var toID = function(arr, category) {
       if (arr[i] === '-' || currentID === undefined) {
         console.log('Cannot find ID for: ', arr[i].trim());
       } else {
-        idList.push(currentID);
+        if (queries) {
+          console.log("INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('" + mobID+ "', '" + currentID + "', '1', '1', '0', '" + dropRate + "');");
+        } else {
+          idList.push(currentID);
+        }
       }
     }
   }
@@ -74,15 +88,16 @@ request(argv.url, function (error, response, html) {
       var thief = $('strong:contains("Thief equipment:")').parent().text().replace(/(\r\n|\n|\r| \(M\)| \(F\))/gm,"").replace(/ +(?= )/g,'').replace(/Thief equipment: /g,'').trim().split(',');
 
       console.log('Mob: ', toID(mobName, 'mob'));
-      console.log(toID(etc, 'etc'));
-      console.log(toID(ore, 'etc'));
-      console.log(toID(maker, 'etc'));
-      console.log(toID(useable, 'consume'));
-      console.log(toID(common, 'eqp'));
-      console.log(toID(warrior, 'eqp'));
-      console.log(toID(magician, 'eqp'));
-      console.log(toID(bowman, 'eqp'));
-      console.log(toID(thief, 'eqp'));
+      var mobID = toID(mobName, 'mob')[0];
+      console.log(toID(etc, 'etc', mobID, 100));
+      console.log(toID(ore, 'etc', mobID, 100));
+      console.log(toID(maker, 'etc', mobID, 100));
+      console.log(toID(useable, 'consume', mobID, 100));
+      console.log(toID(common, 'eqp', mobID, 100));
+      console.log(toID(warrior, 'eqp', mobID, 100));
+      console.log(toID(magician, 'eqp', mobID, 100));
+      console.log(toID(bowman, 'eqp', mobID, 100));
+      console.log(toID(thief, 'eqp', mobID, 100));
     });
   }
 });
