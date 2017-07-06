@@ -6,12 +6,14 @@ How to Use:
 ```
 git clone https://github.com/iFallUpHill/bbbscrape.git
 npm install
-node scraper --url="<bbb.hidden-street url here>"
+node scraper --url="<bbb.hidden-street url here>" 
 ```
+
+Optional parameter: ```--queries```
 
 Example:
 ```
-node scrape --url="http://bbb.hidden-street.net/monster/platoon-chronos"
+node scrape --url="http://bbb.hidden-street.net/monster/platoon-chronos" 
 
 Mob:  [ '2600611' ]
 [ '4000115', '4031992', '4130015', '4130009' ]
@@ -24,6 +26,44 @@ Mob:  [ '2600611' ]
 [ '1040076', '1060065' ]
 Cannot find ID for:  Blue Burgler
 [ '1082074', '1002176', '1002178' ]
+```
+
+```
+node scrape --url="http://bbb.hidden-street.net/monster/platoon-chronos" --queries 
+
+Mob:  [ '2600611' ]
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '4000115', '1', '1', '0', '250');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '4031992', '1', '1', '0', '250');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '4130015', '1', '1', '0', '250');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '4130009', '1', '1', '0', '250');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '4020007', '1', '1', '0', '75');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '4004000', '1', '1', '0', '75');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '4007000', '1', '1', '0', '40');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '4007006', '1', '1', '0', '40');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '2000002', '1', '1', '0', '80');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '2000003', '1', '1', '0', '80');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '2001525', '1', '1', '0', '80');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '2040804', '1', '1', '0', '20');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '2049301', '1', '1', '0', '20');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '2382049', '1', '1', '0', '80');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1092030', '1', '1', '0', '100');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1312008', '1', '1', '0', '100');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1060074', '1', '1', '0', '100');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1402007', '1', '1', '0', '100');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1432004', '1', '1', '0', '100');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1040085', '1', '1', '0', '100');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1092013', '1', '1', '0', '100');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1382012', '1', '1', '0', '100');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1072116', '1', '1', '0', '100');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1002143', '1', '1', '0', '100');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1050036', '1', '1', '0', '100');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1092029', '1', '1', '0', '100');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1040076', '1', '1', '0', '100');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1060065', '1', '1', '0', '100');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1082074', '1', '1', '0', '100');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1002176', '1', '1', '0', '100');
+INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('2600611', '1002178', '1', '1', '0', '100');
+Cannot find ID for:  Blue Burgler
 ```
 
 ## Updating ID List

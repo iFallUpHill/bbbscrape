@@ -8,6 +8,14 @@ var etcDict = require('./json/Etc.json');
 
 var queries = argv.queries ? true : false;
 
+// Config Droprates
+var equipDropRate = 100;
+var useDropRate = 80
+var scrollDropRate = 20;
+var etcDropRate = 250;
+var makerDropRate = 40;
+var oreDropRate = 75;
+
 var toID = function(arr, category, mobID='00000000', dropRate = 0) {
   //console.log(arr)
   idList = []
@@ -41,11 +49,15 @@ var toID = function(arr, category, mobID='00000000', dropRate = 0) {
   else if (category === 'consume') {
     for (var i = 0; i < arr.length; i++) {
       var currentID = consumeDict[arr[i].trim()];
+      var modifiedDropRate = dropRate;
+      if (currentID.substring(0,3) === '204') {
+        modifiedDropRate = scrollDropRate;
+      }
       if (arr[i] === '-' || currentID === undefined) {
         console.log('Cannot find ID for: ', arr[i].trim());
       } else {
         if (queries) {
-          console.log("INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('" + mobID+ "', '" + currentID + "', '1', '1', '0', '" + dropRate + "');");
+          console.log("INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('" + mobID+ "', '" + currentID + "', '1', '1', '0', '" + modifiedDropRate + "');");
         } else {
           idList.push(currentID);
         }
@@ -89,15 +101,27 @@ request(argv.url, function (error, response, html) {
 
       console.log('Mob: ', toID(mobName, 'mob'));
       var mobID = toID(mobName, 'mob')[0];
-      console.log(toID(etc, 'etc', mobID, 100));
-      console.log(toID(ore, 'etc', mobID, 100));
-      console.log(toID(maker, 'etc', mobID, 100));
-      console.log(toID(useable, 'consume', mobID, 100));
-      console.log(toID(common, 'eqp', mobID, 100));
-      console.log(toID(warrior, 'eqp', mobID, 100));
-      console.log(toID(magician, 'eqp', mobID, 100));
-      console.log(toID(bowman, 'eqp', mobID, 100));
-      console.log(toID(thief, 'eqp', mobID, 100));
+      if (queries) {
+        toID(etc, 'etc', mobID, etcDropRate);
+        toID(ore, 'etc', mobID, oreDropRate);
+        toID(maker, 'etc', mobID, makerDropRate);
+        toID(useable, 'consume', mobID, useDropRate);
+        toID(common, 'eqp', mobID, equipDropRate);
+        toID(warrior, 'eqp', mobID, equipDropRate);
+        toID(magician, 'eqp', mobID, equipDropRate);
+        toID(bowman, 'eqp', mobID, equipDropRate);
+        toID(thief, 'eqp', mobID, equipDropRate);
+      } else {
+        console.log(toID(etc, 'etc', mobID, etcDropRate));
+        console.log(toID(ore, 'etc', mobID, oreDropRate));
+        console.log(toID(maker, 'etc', mobID, makerDropRate));
+        console.log(toID(useable, 'consume', mobID, useDropRate));
+        console.log(toID(common, 'eqp', mobID, equipDropRate));
+        console.log(toID(warrior, 'eqp', mobID, equipDropRate));
+        console.log(toID(magician, 'eqp', mobID, equipDropRate));
+        console.log(toID(bowman, 'eqp', mobID, equipDropRate));
+        console.log(toID(thief, 'eqp', mobID, equipDropRate));
+      }
     });
   }
 });
