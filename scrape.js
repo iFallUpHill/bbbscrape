@@ -6,36 +6,82 @@ var eqpDict = require('./json/Eqp.json');
 var consumeDict = require('./json/Consume.json');
 var etcDict = require('./json/Etc.json');
 
-// Kerning City Square
+var pepeScrollsDict = {
+  '2043021': '2043001',
+  '2043116': '2043101',
+  '2043216': '2043201',
+  '2044024': '2044001',
+  '2044116': '2044101',
+  '2044216': '2044201',
+  '2044316': '2044301',
+  '2044416': '2044401',
+  '2043811': '2043801',
+  '2043711': '2043701',
+  '2044511': '2044501',
+  '2044611': '2044601',
+  '2044711': '2044701',
+  '2043311': '2043301',
+  '2044816': '2044801',
+  '2044909': '2044901'
+}
+
+// Mushroom Kingdom
 var mobLookup = [
-"http://bbb.hidden-street.net/monster/cherry-bubble-tea",
-"http://bbb.hidden-street.net/monster/mango-bubble-tea",
-"http://bbb.hidden-street.net/monster/melon-bubble-tea",
-"http://bbb.hidden-street.net/monster/yeti-doll-claw-game",
-"http://bbb.hidden-street.net/monster/yeti-doll",
-"http://bbb.hidden-street.net/monster/jr-pepe-doll-claw-game",
-"http://bbb.hidden-street.net/monster/jr-pepe-doll",
-"http://bbb.hidden-street.net/monster/transformed-doll-claw-game",
-"http://bbb.hidden-street.net/monster/transformed-doll-claw-game-2",
-"http://bbb.hidden-street.net/monster/kid-mannequin",
-"http://bbb.hidden-street.net/monster/female-mannequin",
-"http://bbb.hidden-street.net/monster/male-mannequin",
-"http://bbb.hidden-street.net/monster/blue-perfume",
-"http://bbb.hidden-street.net/monster/blue-perfume-2",
-"http://bbb.hidden-street.net/monster/yellow-perfume",
-"http://bbb.hidden-street.net/monster/yellow-perfume-2",
-"http://bbb.hidden-street.net/monster/pink-perfume",
-"http://bbb.hidden-street.net/monster/pink-perfume-2",
-"http://bbb.hidden-street.net/monster/latest-hits-compilation",
-"http://bbb.hidden-street.net/monster/greatest-oldies",
-"http://bbb.hidden-street.net/monster/cheap-amplifier",
-"http://bbb.hidden-street.net/monster/fancy-amplifier",
-"http://bbb.hidden-street.net/monster/cheap-amplifier-vip",
-"http://bbb.hidden-street.net/monster/greatest-oldies-vip",
-"http://bbb.hidden-street.net/monster/cheap-amplifier-vip",
-"http://bbb.hidden-street.net/monster/fancy-amplifier-vip",
-"http://bbb.hidden-street.net/monster/spirit-of-rock"
+"http://bbb.hidden-street.net/monster/renegade-spores",
+"http://bbb.hidden-street.net/monster/poison-mushroom",
+"http://bbb.hidden-street.net/monster/intoxicated-pig",
+"http://bbb.hidden-street.net/monster/helmet-pepe",
+"http://bbb.hidden-street.net/monster/royal-guard-pepe",
+"http://bbb.hidden-street.net/monster/gold-yeti-and-king-pepe",
+"http://bbb.hidden-street.net/monster/grey-yeti-and-king-pepe",
+"http://bbb.hidden-street.net/monster/white-yeti-and-king-pepe",
+"http://bbb.hidden-street.net/monster/prime-minister",
 ]
+
+// Kerning City Square
+// var mobLookup = [
+// "http://bbb.hidden-street.net/monster/cherry-bubble-tea",
+// "http://bbb.hidden-street.net/monster/mango-bubble-tea",
+// "http://bbb.hidden-street.net/monster/melon-bubble-tea",
+// "http://bbb.hidden-street.net/monster/yeti-doll-claw-game",
+// "http://bbb.hidden-street.net/monster/yeti-doll",
+// "http://bbb.hidden-street.net/monster/jr-pepe-doll-claw-game",
+// "http://bbb.hidden-street.net/monster/jr-pepe-doll",
+// "http://bbb.hidden-street.net/monster/transformed-doll-claw-game",
+// "http://bbb.hidden-street.net/monster/transformed-doll-claw-game-2",
+// "http://bbb.hidden-street.net/monster/kid-mannequin",
+// "http://bbb.hidden-street.net/monster/female-mannequin",
+// "http://bbb.hidden-street.net/monster/male-mannequin",
+// "http://bbb.hidden-street.net/monster/blue-perfume",
+// "http://bbb.hidden-street.net/monster/blue-perfume-2",
+// "http://bbb.hidden-street.net/monster/yellow-perfume",
+// "http://bbb.hidden-street.net/monster/yellow-perfume-2",
+// "http://bbb.hidden-street.net/monster/pink-perfume",
+// "http://bbb.hidden-street.net/monster/pink-perfume-2",
+// "http://bbb.hidden-street.net/monster/latest-hits-compilation",
+// "http://bbb.hidden-street.net/monster/greatest-oldies",
+// "http://bbb.hidden-street.net/monster/cheap-amplifier",
+// "http://bbb.hidden-street.net/monster/fancy-amplifier",
+// "http://bbb.hidden-street.net/monster/cheap-amplifier-vip",
+// "http://bbb.hidden-street.net/monster/greatest-oldies-vip",
+// "http://bbb.hidden-street.net/monster/cheap-amplifier-vip",
+// "http://bbb.hidden-street.net/monster/fancy-amplifier-vip",
+// "http://bbb.hidden-street.net/monster/spirit-of-rock"
+// ]
+
+// Chryse
+// var mobLookup = [
+// "http://global.hidden-street.net/monster/rabbit",
+// "http://global.hidden-street.net/monster/golden-rabbit",
+// "http://global.hidden-street.net/monster/ergoth",
+// "http://global.hidden-street.net/monster/scorpie",
+// "http://global.hidden-street.net/monster/golden-scorpie",
+// "http://global.hidden-street.net/monster/ferret",
+// "http://global.hidden-street.net/monster/golden-ferret",
+// "http://global.hidden-street.net/monster/mammoth",
+// "http://global.hidden-street.net/monster/golden-mammoth",
+// "http://global.hidden-street.net/monster/xerxes",
+// ]
 
 var queries = argv.queries ? true : false;
 var requestURLs = argv.url ? [argv.url] : mobLookup;
@@ -47,10 +93,10 @@ var scrollDropRate = 20;
 var starDropRate = 100;
 var arrowDropRate = 8000;
 var elixirDropRate = 1000;
-var potionDropRate = 15000;
-var etcDropRate = 500000;
+var potionDropRate = 10000;
+var etcDropRate = 400000;
 var makerDropRate = 300;
-var oreDropRate = 4000;
+var oreDropRate = 2500;
 
 // Arrow Drops
 var arrowMin = 11;
@@ -114,6 +160,12 @@ var toID = function(arr, category, mobID='00000000', dropRate = 0) {
       if (arr[i] === '-' || currentID === undefined) {
         console.log('Cannot find ID for: ', arr[i].trim());
       } else {
+
+        // Remove King Pepe Scrolls
+        if (pepeScrollsDict[currentID]) {
+          currentID = pepeScrollsDict[currentID];
+        }
+
         if (queries) {
           console.log("INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('" + mobID+ "', '" + currentID + "', '" + minimum_quantity + "', '" + maximum_quantity + "', '0', '" + modifiedDropRate + "');");
         } else {
