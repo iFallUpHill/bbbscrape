@@ -26,17 +26,17 @@ var pepeScrollsDict = {
 }
 
 // Mushroom Kingdom
-var mobLookup = [
-"http://bbb.hidden-street.net/monster/renegade-spores",
-"http://bbb.hidden-street.net/monster/poison-mushroom",
-"http://bbb.hidden-street.net/monster/intoxicated-pig",
-"http://bbb.hidden-street.net/monster/helmet-pepe",
-"http://bbb.hidden-street.net/monster/royal-guard-pepe",
-"http://bbb.hidden-street.net/monster/gold-yeti-and-king-pepe",
-"http://bbb.hidden-street.net/monster/grey-yeti-and-king-pepe",
-"http://bbb.hidden-street.net/monster/white-yeti-and-king-pepe",
-"http://bbb.hidden-street.net/monster/prime-minister",
-]
+// var mobLookup = [
+// "http://bbb.hidden-street.net/monster/renegade-spores",
+// "http://bbb.hidden-street.net/monster/poison-mushroom",
+// "http://bbb.hidden-street.net/monster/intoxicated-pig",
+// "http://bbb.hidden-street.net/monster/helmet-pepe",
+// "http://bbb.hidden-street.net/monster/royal-guard-pepe",
+// "http://bbb.hidden-street.net/monster/gold-yeti-and-king-pepe",
+// "http://bbb.hidden-street.net/monster/grey-yeti-and-king-pepe",
+// "http://bbb.hidden-street.net/monster/white-yeti-and-king-pepe",
+// "http://bbb.hidden-street.net/monster/prime-minister",
+// ]
 
 // Kerning City Square
 // var mobLookup = [
@@ -83,6 +83,46 @@ var mobLookup = [
 // "http://global.hidden-street.net/monster/xerxes",
 // ]
 
+// Neo City 
+// var mobLookup = [
+// "http://bbb.hidden-street.net/monster/red-slime-2",
+// "http://bbb.hidden-street.net/monster/silver-slime",
+// "http://bbb.hidden-street.net/monster/gold-slime",
+// "http://bbb.hidden-street.net/monster/overlord-a",
+// "http://bbb.hidden-street.net/monster/overlord-b",
+// "http://bbb.hidden-street.net/monster/bergamot",
+// "http://bbb.hidden-street.net/monster/robby",
+// "http://bbb.hidden-street.net/monster/iruvata",
+// "http://bbb.hidden-street.net/monster/dunas",
+// "http://bbb.hidden-street.net/monster/afterlord",
+// "http://bbb.hidden-street.net/monster/prototype-lord",
+// "http://bbb.hidden-street.net/monster/aufheben",
+// "http://bbb.hidden-street.net/monster/maverick-type-a",
+// "http://bbb.hidden-street.net/monster/maverick-type-s",
+// "http://bbb.hidden-street.net/monster/maverick-type-d",
+// "http://bbb.hidden-street.net/monster/oberon",
+// "http://bbb.hidden-street.net/monster/imperial-guard",
+// "http://bbb.hidden-street.net/monster/royal-guard",
+// "http://bbb.hidden-street.net/monster/gatekeeper-nex",
+// ]
+
+// Showa
+var mobLookup = [
+"http://bbb.hidden-street.net/monster/jr-cerebes",
+"http://bbb.hidden-street.net/monster/bain",
+"http://bbb.hidden-street.net/monster/male-boss",
+"http://bbb.hidden-street.net/monster/female-boss",
+"http://bbb.hidden-street.net/monster/the-boss",
+"http://bbb.hidden-street.net/monster/extra-a",
+"http://bbb.hidden-street.net/monster/extra-b",
+"http://bbb.hidden-street.net/monster/extra-c",
+"http://bbb.hidden-street.net/monster/extra-d",
+"http://bbb.hidden-street.net/monster/bodyguard-a",
+"http://bbb.hidden-street.net/monster/bodyguard-b",
+"http://bbb.hidden-street.net/monster/leader-a",
+"http://bbb.hidden-street.net/monster/leader-b",
+]
+
 var queries = argv.queries ? true : false;
 var requestURLs = argv.url ? [argv.url] : mobLookup;
 
@@ -120,13 +160,21 @@ var toID = function(arr, category, mobID='00000000', dropRate = 0) {
   else if (category === 'eqp') {
     for (var i = 0; i < arr.length; i++) {
       var currentID = eqpDict[arr[i].trim()];
-      if (arr[i] === '-' || currentID === undefined) {
-        console.log('Cannot find ID for: ', arr[i].trim());
-      } else {
-        if (queries) {
-          console.log("INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('" + mobID+ "', '" + currentID + "', '1', '1', '0', '" + dropRate + "');");
+
+      if (currentID) {
+        leadingDigits = currentID.substring(0,3);
+      }
+
+      // Exclude Kataras (Temp for Neo City.)
+      if (leadingDigits !== '134') { 
+        if (arr[i] === '-' || currentID === undefined) {
+          console.log('Cannot find ID for: ', arr[i].trim());
         } else {
-          idList.push(currentID);
+          if (queries) {
+            console.log("INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('" + mobID+ "', '" + currentID + "', '1', '1', '0', '" + dropRate + "');");
+          } else {
+            idList.push(currentID);
+          }
         }
       }
     }
