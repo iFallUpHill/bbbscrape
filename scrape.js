@@ -25,102 +25,22 @@ var pepeScrollsDict = {
   '2044909': '2044901'
 }
 
-// Mushroom Kingdom
-// var mobLookup = [
-// "http://bbb.hidden-street.net/monster/renegade-spores",
-// "http://bbb.hidden-street.net/monster/poison-mushroom",
-// "http://bbb.hidden-street.net/monster/intoxicated-pig",
-// "http://bbb.hidden-street.net/monster/helmet-pepe",
-// "http://bbb.hidden-street.net/monster/royal-guard-pepe",
-// "http://bbb.hidden-street.net/monster/gold-yeti-and-king-pepe",
-// "http://bbb.hidden-street.net/monster/grey-yeti-and-king-pepe",
-// "http://bbb.hidden-street.net/monster/white-yeti-and-king-pepe",
-// "http://bbb.hidden-street.net/monster/prime-minister",
-// ]
-
-// Kerning City Square
-// var mobLookup = [
-// "http://bbb.hidden-street.net/monster/cherry-bubble-tea",
-// "http://bbb.hidden-street.net/monster/mango-bubble-tea",
-// "http://bbb.hidden-street.net/monster/melon-bubble-tea",
-// "http://bbb.hidden-street.net/monster/yeti-doll-claw-game",
-// "http://bbb.hidden-street.net/monster/yeti-doll",
-// "http://bbb.hidden-street.net/monster/jr-pepe-doll-claw-game",
-// "http://bbb.hidden-street.net/monster/jr-pepe-doll",
-// "http://bbb.hidden-street.net/monster/transformed-doll-claw-game",
-// "http://bbb.hidden-street.net/monster/transformed-doll-claw-game-2",
-// "http://bbb.hidden-street.net/monster/kid-mannequin",
-// "http://bbb.hidden-street.net/monster/female-mannequin",
-// "http://bbb.hidden-street.net/monster/male-mannequin",
-// "http://bbb.hidden-street.net/monster/blue-perfume",
-// "http://bbb.hidden-street.net/monster/blue-perfume-2",
-// "http://bbb.hidden-street.net/monster/yellow-perfume",
-// "http://bbb.hidden-street.net/monster/yellow-perfume-2",
-// "http://bbb.hidden-street.net/monster/pink-perfume",
-// "http://bbb.hidden-street.net/monster/pink-perfume-2",
-// "http://bbb.hidden-street.net/monster/latest-hits-compilation",
-// "http://bbb.hidden-street.net/monster/greatest-oldies",
-// "http://bbb.hidden-street.net/monster/cheap-amplifier",
-// "http://bbb.hidden-street.net/monster/fancy-amplifier",
-// "http://bbb.hidden-street.net/monster/cheap-amplifier-vip",
-// "http://bbb.hidden-street.net/monster/greatest-oldies-vip",
-// "http://bbb.hidden-street.net/monster/cheap-amplifier-vip",
-// "http://bbb.hidden-street.net/monster/fancy-amplifier-vip",
-// "http://bbb.hidden-street.net/monster/spirit-of-rock"
-// ]
-
-// Chryse
-// var mobLookup = [
-// "http://global.hidden-street.net/monster/rabbit",
-// "http://global.hidden-street.net/monster/golden-rabbit",
-// "http://global.hidden-street.net/monster/ergoth",
-// "http://global.hidden-street.net/monster/scorpie",
-// "http://global.hidden-street.net/monster/golden-scorpie",
-// "http://global.hidden-street.net/monster/ferret",
-// "http://global.hidden-street.net/monster/golden-ferret",
-// "http://global.hidden-street.net/monster/mammoth",
-// "http://global.hidden-street.net/monster/golden-mammoth",
-// "http://global.hidden-street.net/monster/xerxes",
-// ]
-
-// Neo City 
-// var mobLookup = [
-// "http://bbb.hidden-street.net/monster/red-slime-2",
-// "http://bbb.hidden-street.net/monster/silver-slime",
-// "http://bbb.hidden-street.net/monster/gold-slime",
-// "http://bbb.hidden-street.net/monster/overlord-a",
-// "http://bbb.hidden-street.net/monster/overlord-b",
-// "http://bbb.hidden-street.net/monster/bergamot",
-// "http://bbb.hidden-street.net/monster/robby",
-// "http://bbb.hidden-street.net/monster/iruvata",
-// "http://bbb.hidden-street.net/monster/dunas",
-// "http://bbb.hidden-street.net/monster/afterlord",
-// "http://bbb.hidden-street.net/monster/prototype-lord",
-// "http://bbb.hidden-street.net/monster/aufheben",
-// "http://bbb.hidden-street.net/monster/maverick-type-a",
-// "http://bbb.hidden-street.net/monster/maverick-type-s",
-// "http://bbb.hidden-street.net/monster/maverick-type-d",
-// "http://bbb.hidden-street.net/monster/oberon",
-// "http://bbb.hidden-street.net/monster/imperial-guard",
-// "http://bbb.hidden-street.net/monster/royal-guard",
-// "http://bbb.hidden-street.net/monster/gatekeeper-nex",
-// ]
-
-// Showa
+// Haunted House
 var mobLookup = [
-"http://bbb.hidden-street.net/monster/jr-cerebes",
-"http://bbb.hidden-street.net/monster/bain",
-"http://bbb.hidden-street.net/monster/male-boss",
-"http://bbb.hidden-street.net/monster/female-boss",
-"http://bbb.hidden-street.net/monster/the-boss",
-"http://bbb.hidden-street.net/monster/extra-a",
-"http://bbb.hidden-street.net/monster/extra-b",
-"http://bbb.hidden-street.net/monster/extra-c",
-"http://bbb.hidden-street.net/monster/extra-d",
-"http://bbb.hidden-street.net/monster/bodyguard-a",
-"http://bbb.hidden-street.net/monster/bodyguard-b",
-"http://bbb.hidden-street.net/monster/leader-a",
-"http://bbb.hidden-street.net/monster/leader-b",
+'http://bbb.hidden-street.net/monster/psycho-jack-box',
+'http://bbb.hidden-street.net/monster/sophilia-doll-ground',
+'http://bbb.hidden-street.net/monster/sophilia-doll',
+'http://bbb.hidden-street.net/monster/glutton-ghoul',
+'http://bbb.hidden-street.net/monster/nightmare',
+'http://bbb.hidden-street.net/monster/psycho-jack',
+'http://bbb.hidden-street.net/monster/voodoo',
+'http://bbb.hidden-street.net/monster/hoodoo',
+'http://bbb.hidden-street.net/monster/purple-flying-book',
+'http://bbb.hidden-street.net/monster/orange-flying-book',
+'http://bbb.hidden-street.net/monster/blue-flying-book',
+'http://bbb.hidden-street.net/monster/dead-scarecrow',
+'http://bbb.hidden-street.net/monster/twisted-jester',
+'http://bbb.hidden-street.net/monster/rotting-skeleton',
 ]
 
 var queries = argv.queries ? true : false;
@@ -137,6 +57,7 @@ var potionDropRate = 10000;
 var etcDropRate = 400000;
 var makerDropRate = 300;
 var oreDropRate = 2500;
+var simManuRate = 40;
 
 // Arrow Drops
 var arrowMin = 11;
@@ -149,8 +70,10 @@ var toID = function(arr, category, mobID='00000000', dropRate = 0) {
   if (category === 'mob') {
     for (var i = 0; i < arr.length; i++) {
       var currentID = mobDict[arr[i].trim()];
-      if (arr[i] === '-' || currentID === undefined) {
-        console.log('Cannot find ID for: ', arr[i].trim());
+      if (arr[i] === '-') {
+          // do nothing 
+      } else if (currentID === undefined) {
+        console.log('--Cannot find ID for: ', arr[i].trim());
       } else {
         idList.push(currentID);
       }
@@ -167,8 +90,10 @@ var toID = function(arr, category, mobID='00000000', dropRate = 0) {
 
       // Exclude Kataras (Temp for Neo City.)
       if (leadingDigits !== '134') { 
-        if (arr[i] === '-' || currentID === undefined) {
-          console.log('Cannot find ID for: ', arr[i].trim());
+        if (arr[i] === '-') {
+          // do nothing 
+        } else if (currentID === undefined) {
+          console.log('--Cannot find ID for: ', arr[i].trim());
         } else {
           if (queries) {
             console.log("INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('" + mobID+ "', '" + currentID + "', '1', '1', '0', '" + dropRate + "');");
@@ -205,8 +130,10 @@ var toID = function(arr, category, mobID='00000000', dropRate = 0) {
         minimum_quantity = arrowMin;
         maximum_quantity = arrowMax;
       }
-      if (arr[i] === '-' || currentID === undefined) {
-        console.log('Cannot find ID for: ', arr[i].trim());
+      if (arr[i] === '-') {
+          // do nothing 
+      } else if (currentID === undefined) {
+        console.log('--Cannot find ID for: ', arr[i].trim());
       } else {
 
         // Remove King Pepe Scrolls
@@ -226,11 +153,25 @@ var toID = function(arr, category, mobID='00000000', dropRate = 0) {
   else if (category === 'etc') {
     for (var i = 0; i < arr.length; i++) {
       var currentID = etcDict[arr[i].trim()];
-      if (arr[i] === '-' || currentID === undefined) {
-        console.log('Cannot find ID for: ', arr[i].trim());
+      var leadingDigits = '0';
+      if (currentID) {
+        leadingDigits = currentID.substring(0,3);
+      }
+
+      if (arr[i] === '-') {
+          // do nothing 
+      } else if (currentID === undefined) {
+        console.log('-- Cannot find ID for: ', arr[i].trim());
       } else {
         if (queries) {
-          console.log("INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('" + mobID+ "', '" + currentID + "', '1', '1', '0', '" + dropRate + "');");
+
+          // Simulators and Production Manuals 
+          var modifiedDropRate = dropRate;
+          if (leadingDigits === '413') {
+            modifiedDropRate = simManuRate
+          }
+
+          console.log("INSERT into drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance) VALUES ('" + mobID+ "', '" + currentID + "', '1', '1', '0', '" + modifiedDropRate + "');");
         } else {
           idList.push(currentID);
         }
@@ -258,7 +199,7 @@ for (var i = 0; i < requestURLs.length; i++) {
         var bowman = $('strong:contains("Bowman equipment:")').parent().text().replace(/(\r\n|\n|\r| \(M\)| \(F\))/gm,"").replace(/ +(?= )/g,'').replace(/Bowman equipment: /g,'').trim().split(',');
         var thief = $('strong:contains("Thief equipment:")').parent().text().replace(/(\r\n|\n|\r| \(M\)| \(F\))/gm,"").replace(/ +(?= )/g,'').replace(/Thief equipment: /g,'').trim().split(',');
 
-        console.log('Mob: ', toID(mobName, 'mob'));
+        console.log('--Mob: ', toID(mobName, 'mob'), mobName);
         var mobID = toID(mobName, 'mob')[0];
         if (queries) {
           toID(etc, 'etc', mobID, etcDropRate);
@@ -270,7 +211,6 @@ for (var i = 0; i < requestURLs.length; i++) {
           toID(magician, 'eqp', mobID, equipDropRate);
           toID(bowman, 'eqp', mobID, equipDropRate);
           toID(thief, 'eqp', mobID, equipDropRate);
-          console.log('----------------------------------------')
         } else {
           console.log(toID(etc, 'etc', mobID, etcDropRate));
           console.log(toID(ore, 'etc', mobID, oreDropRate));
